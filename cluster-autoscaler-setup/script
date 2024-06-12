@@ -21,4 +21,4 @@ aws autoscaling create-or-update-tags --tags \
 aws iam delete-policy --policy-arn arn:aws:iam::675327529402:policy/AmazonEKSClusterAutoscalerPolicy
 eksctl delete iamserviceaccount --cluster=fast-campus-cluster --namespace=kube-system --name=cluster-autoscaler
 kubectl delete -f cluster-autoscaler.yaml
-aws autoscaling delete-tags --tags \ "ResourceId=eks-fast-campus-2024052407345624260000000e-c2c7d4c3-1b27-429d-2e7b-f5e31d6c9d78,ResourceType=auto-scaling-group,Key=k8s.io/cluster-autoscaler/enabled" \ "ResourceId=eks-fast-campus-2024052407345624260000000e-c2c7d4c3-1b27-429d-2e7b-f5e31d6c9d78,ResourceType=auto-scaling-group,Key=k8s.io/cluster-autoscaler/fast-campus-cluster"
+aws autoscaling delete-tags --tags  "ResourceId=eks-fast-campus-2024052407345624260000000e-c2c7d4c3-1b27-429d-2e7b-f5e31d6c9d78,ResourceType=auto-scaling-group,Key=k8s.io/cluster-autoscaler/enabled" "ResourceId=eks-fast-campus-2024052407345624260000000e-c2c7d4c3-1b27-429d-2e7b-f5e31d6c9d78,ResourceType=auto-scaling-group,Key=k8s.io/cluster-autoscaler/fast-campus-cluster"
